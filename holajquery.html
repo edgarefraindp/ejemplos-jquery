@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hola jQuery</title>
+    <script src="jquery-3.1.1.min.js"></script>
+</head>
+<body>
+    <h1>Hola jQuery</h1>
+    <p class="parrafo">Parrafo 1</p>
+
+    <h2>Encabezado 2</h2>
+    <p class="parrafo">Parrafo 2</p>
+
+    <h3>Encabezado 2</h3>
+    <p id="parrafo 3">Parrafo 3</p>
+
+    <script>
+        jQuery('p:last').text("Modificado desde jQuery")
+        jQuery('p:last').css('color', 'red')
+    </script>
+</body>
+</html>
