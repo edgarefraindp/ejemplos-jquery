@@ -4,21 +4,40 @@
     <meta charset="UTF-8">
     <title>Hola jQuery</title>
     <script src="jquery-3.1.1.min.js"></script>
-    <script src="holajquery.js"></script>
+    <!--<script src="holajquery.js"></script>-->
 </head>
 <body>
     <h1>Hola jQuery</h1>
     <p class="parrafo">Parrafo 1</p>
-
+    <button>Boton 1</button>
     <h2>Encabezado 2</h2>
     <p class="parrafo">Parrafo 2</p>
+    <button class="boton">Boton 2</button>
 
     <h3>Encabezado 2</h3>
-    <p id="parrafo 3">Parrafo 3</p>
+    <p id="parrafo 3">Parrafo 3</p>   
+    <button class="boton">Boton 3</button>
+
 
     <script>
         jQuery('p:last').text("Modificado desde jQuery")
         jQuery('p:last').css('color', 'red')
+    </script>
+    <script>
+        // $(function() {
+        //     $('#Boton1').click((function (){
+        //         alert('Hola evento:' + $(this).text())
+        //     }))
+        // })
+        //Para todos los <button>
+        $(function () {  
+            $('button').on('click','.boton',{
+                propiedad1 : 'valor1',
+                propiedad2 : 'valor2'
+            }, function(e) {
+                alert(e.data.propiedad1)
+            })
+        })
     </script>
 </body>
 </html>

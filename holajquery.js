@@ -11,4 +11,11 @@ $(function()
     //Crea un nuevo parrafo en un elemento jQuery
     $nuevo = $('<p>Parrafo <b>nuevo</b></p>')
     $('h2').after($nuevo)
+    /*$(selector).click(function (e) { 
+        e.preventDefault();
+        
+    });
+    $(selector).on(events, function () {
+        
+    });*/
 })
