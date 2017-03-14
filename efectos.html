@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Efectos jQuery</title>
+</head>
+<body>
+    <style>
+        .caja{
+            background-color: greenyellow;
+            width: 640px;
+            height: 480px;
+        }
+        .pelota{
+            background-color: orange;
+            width: 50px;
+            height: 50px;
+            border-radius: 25px;
+        }
+        .caja, .pelota{
+            border: black solid 1px;
+        }
+    </style>
+
+    <h1>Ejemplos de animaciones en jQuery</h1>
+    <h2>Ocultar y mostrar</h2>
+    <button id="btn-ocultar" >Ocultar</button>
+    <button id="btn-mostrar" >Mostrar</button>
+    <button id="btn-alternar">Alternar</button>
+    <p id="parrafo1">
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+    </p>
+    <h2>Ocultar y mostrar</h2>
+    <button id="btn-desaparecer"    >Fade Out</button>
+    <button id="btn-aparecer"       >Fade In</button>
+    <button id="btn-alternarFundido">Fade Toggle</button>
+    <button id="btn-fundidoHasta"   >Fade To</button>    
+    <p id="parrafo2">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sit amet sodales lorem, at luctus urna. Aenean eget commodo velit. Aenean leo ante, bibendum ac molestie non, semper id ligula. Curabitur sapien nisi, posuere quis dapibus et, ornare eget tortor. Quisque dapibus justo justo, sed euismod nisl viverra sit amet. Duis elementum nisl non accumsan interdum. Nam tincidunt dolor ac lorem accumsan, a imperdiet tellus finibus. Fusce interdum leo id luctus mollis. Donec tempor, tortor rutrum aliquet tempus, neque nisl sodales nibh, at vulputate enim magna a urna. Ut posuere nisl erat, vel vestibulum eros lacinia ut. Curabitur velit orci, facilisis a odio id, lacinia imperdiet felis.     </p>
+    <h2>Deslizamiento</h2>
+    <button id="btn-deslizarArriba"   >Slide Out</button>
+    <button id="btn-deslizarAbajo"    >Slide In</button>
+    <button id="btn-alternarDeslizado">Slide Toggle</button>
+    <p id="parrafo3">
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+    </p>
+
+    <h2>Animacion</h2>
+    
+    <div class="caja">
+        <div class="pelota">
+        </div>
+    </div>
+    <script src="jquery-3.1.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#btn-ocultar').click(function(){
+                $('#parrafo1').hide('slow','linear')
+            }) 
+            $('#btn-mostrar').click(function(){
+                $('#parrafo1').show('slow','linear')
+            }) 
+            $('#btn-alternar').click(function(){
+                $('#parrafo1').toggle('slow','linear')
+            })
+            $('#btn-desaparecer').click(function(){
+                $('#parrafo2').fadeOut('slow','linear')
+            }) 
+            $('#btn-aparecer').click(function(){
+                $('#parrafo2').fadeIn('slow','linear')
+            }) 
+            $('#btn-alternarFundido').click(function(){
+                $('#parrafo2').fadeToggle('slow','linear')
+            })
+            $('#btn-fundidoHasta').click(function(){
+                $('#parrafo2').fadeTo('slow',0.5)
+            })
+            $('#btn-deslizarArriba').click(function(){
+                $('#parrafo3').slideUp('slow','linear')
+            }) 
+            $('#btn-deslizarAbajo').click(function(){
+                $('#parrafo3').slideDown('slow','linear')
+            }) 
+            $('#btn-alternarDeslizado').click(function(){
+                $('#parrafo3').slideToggle('slow','linear')
+            })
+            $('.pelota').click(function(){
+                $(this).animate({
+                    height: '450px',
+                    width: '450px'
+                });
+            })
+        })
+    </script>
+</body>
+</html>
