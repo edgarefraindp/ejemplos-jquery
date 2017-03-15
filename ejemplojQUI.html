@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jQuery UI</title>
+    <script src='jquery-3.1.1.min.js'></script>
+    <script src='jquery-ui/jquery-ui.min.js'></script>
+    <link rel="stylesheet" href="jquery-ui/jquery-ui.css">
+    <style>
+        #acordeon, #pestañas{
+            width: 500px;
+        }
+        .caja{
+            width: 400px;
+            height: 400px;
+            background-color: lightcoral;
+            border: solid 1px black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ejemplos de jQueryUI</h1>
+    <h2>Ejemplo de acordeon</h2>
+    <div id="acordeon">
+        <h3>Encabezado 1</h3>
+        <div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas dictum ipsum nec augue hendrerit pretium. Mauris lobortis metus consequat metus vehicula ultricies. Donec ut orci in nisl commodo consequat ac ac metus. Nulla fermentum condimentum tempor. Nam odio justo, malesuada id sem non, luctus consectetur velit. Suspendisse potenti. Mauris finibus rutrum eros non fringilla. Sed est neque, molestie at lacus sit amet, congue sagittis mi. Donec a ex est. Morbi ac urna elit. </p>
+        </div>
+        <h3>Encabezado 2</h3>
+        <div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas dictum ipsum nec augue hendrerit pretium. Mauris lobortis metus consequat metus vehicula ultricies. Donec ut orci in nisl commodo consequat ac ac metus. Nulla fermentum condimentum tempor. Nam odio justo, malesuada id sem non, luctus consectetur velit. Suspendisse potenti. Mauris finibus rutrum eros non fringilla. Sed est neque, molestie at lacus sit amet, congue sagittis mi. Donec a ex est. Morbi ac urna elit. </p>
+        </div>
+        <h3>Encabezado 3</h3>
+        <div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas dictum ipsum nec augue hendrerit pretium. Mauris lobortis metus consequat metus vehicula ultricies. Donec ut orci in nisl commodo consequat ac ac metus. Nulla fermentum condimentum tempor. Nam odio justo, malesuada id sem non, luctus consectetur velit. Suspendisse potenti. Mauris finibus rutrum eros non fringilla. Sed est neque, molestie at lacus sit amet, congue sagittis mi. Donec a ex est. Morbi ac urna elit. </p>
+        </div>
+    </div>
+    <h2>Ejemplo de pestañas</h2>
+    <div id="pestañas">
+        <ul>
+            <li><a href="#contenido1">Pestaña 1</a></li>
+            <li><a href="#contenido2">Pestaña 2</a></li>
+            <li><a href="#contenido3">Pestaña 3</a></li>
+        </ul>
+        <div id="contenido1">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            </p>
+        </div>
+        <div id="contenido2">
+            <p>
+                Iste nobis voluptatum provident ipsa ab error, iure consectetur quasi veritatis et eius, distinctio eos quibusdam,
+            </p>
+        </div>
+        <div id="contenido3">
+            <p>
+                ipsum laboriosam repudiandae deserunt praesentium explicabo.
+            </p>
+        </div>
+    </div>
+    <h2>Ejemplo de pestañas</h2>
+    <div class="caja">
+        <span id="arrastrable">Arrastrame!</span>
+    </div>
+    <script>
+        $(document).ready(function(){
+            $('#acordeon').accordion()
+            $('#pestañas').tabs()
+            $('#arrastrable').draggable({
+                containment: 'parent'
+            })
+        })
+    </script>
+</body>
+</html>
